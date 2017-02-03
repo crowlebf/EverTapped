@@ -2,10 +2,26 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>title</title>
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <title>EverTapped</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="http://csshake.surge.sh/csshake.min.css">
+    <link rel="stylesheet" href="style.css" type="text/css">
   </head>
   <body>
-    <p>hello world</p>
+    <h1 class="shake-slow shake-constant">EverTapped</h1>
+    <div id="app">
+      <ol>
+        <li>Beer: {{beerName}}</li>
+        <li>Brewery: {{brewery}}</li>
+        <li>ABV: {{abv}}</li>
+      </ol>
+      <p>{{getBeerName()}}</p>
+
+    </div>
+    <!-- JS -->
+    <script src="node_modules/vue/dist/vue.js"></script>
+    <script src="node_modules/vue-resource/dist/vue-resource.js"></script>
+    <script src="app.js"></script>
   </body>
-  <script src="https://unpkg.com/vue/dist/vue.js"></script>
 </html>
