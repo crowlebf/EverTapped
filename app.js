@@ -13,8 +13,10 @@ new Vue({
       .then((data) => {
         const beerName = data.body[0].name;
         const style = data.body[0].style.name;
+        const abv = data.body[0].abv;
         set(this, 'beerName', beerName);
         set(this, 'style', style);
+        set(this, 'abv', abv);
       })
       .catch((error) => {
         console.log('nope there is an error', error);
